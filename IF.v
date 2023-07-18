@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "defines.vh"
 //////////////////////////////////////////////////////////////////////////////////
 // IF module is a module that consist of three sub module:
 // NPC , PC , IROM

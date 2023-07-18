@@ -1,3 +1,5 @@
+`include "defines.vh"
+
 module ALU (
     input wire [1:0] op,
     input wire [31:0] A,

@@ -1,3 +1,4 @@
+`include "defines.vh"
 module PC (
     input wire [31:0] din,
     input wire rst,

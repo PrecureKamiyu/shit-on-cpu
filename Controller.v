@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-
+`include "defines.vh"
 module Controller
 #(
     localparam OP_R    = 7'b0110011,

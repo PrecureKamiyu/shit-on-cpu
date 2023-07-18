@@ -1,3 +1,4 @@
+`include "defines.vh"
 module RF (
     input wire clk,
     input wire [4:0] rR1,

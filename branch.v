@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "defines.vh"
 
 module branch(
     input wire [1:0] op,

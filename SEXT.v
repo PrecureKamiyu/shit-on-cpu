@@ -1,3 +1,4 @@
+`include "defines.vh"
 module SEXT (
     input wire [2:0] op,
     input wire [31:0] din,
