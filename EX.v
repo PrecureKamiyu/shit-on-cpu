@@ -4,7 +4,7 @@
 module EX(
     // Controls
     input wire [3:0] alu_op,
-    input wire b_sel,    
+    input wire b_sel,
     input wire [1:0] br_op,
     
     // data

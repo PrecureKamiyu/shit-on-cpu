@@ -133,7 +133,7 @@ module CONTROLLER
             OP_B:
                 alu_op = `ALU_SUB;
                 // note here
-            default: 
+            default:
                 alu_op = `ALU_AND;
         endcase
     end

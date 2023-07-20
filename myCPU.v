@@ -74,7 +74,7 @@ wire [31:0] wD;
 ID myID (
   .din(inst),
   .npc_pc4(npc_pc4),
-  .dram_rdo(dram_rdo),
+  .dram_rdo(Bus_rdata),
   .alu_c(alu_c),
   .rf_wsel(rf_wsel),
   .rf_we(rf_we),
