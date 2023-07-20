@@ -42,7 +42,7 @@ module ID(
         `RF_WSEL_PC4: wD = npc_pc4;
         `RF_WSEL_EXT: wD = sext_ext;
         `RF_WSEL_RDO: wD = dram_rdo;
-        default: ;
+        default: wD = 0;
         endcase
     end
 
