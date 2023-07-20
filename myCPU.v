@@ -33,7 +33,7 @@ module myCPU (
     assign debug_wb_pc        = (debug_wb_have_inst) ? pc : 32'b0;
     assign debug_wb_ena       = (debug_wb_have_inst && rf_we) ? 1'b1 : 1'b0;
     assign debug_wb_reg       = (debug_wb_ena) ? inst[11:7] : 5'b0;
-    assign debug_wb_value     = (debug_wb_ena) ? wD : 32'd4;
+    assign debug_wb_value     = (debug_wb_ena) ? wD : 32'b0;
 `endif
 
 // IROM part
