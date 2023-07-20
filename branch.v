@@ -10,10 +10,10 @@ module branch(
 always @(*) begin
     case (op)
         `BR_NO: f = 1'b0;
-        `BR_NE: f = (C != 32'b0);
         `BR_EQ: f = (C == 32'b0);
-        `BR_GE: f = (C >= 32'b0);
-        `BR_LT: f = (C <  32'b0);
+        `BR_NE: f = (C != 32'b0);
+        `BR_GE: f = (C[31] == 1'b0);
+        `BR_LT: f = (C[31] == 1'b1);
         `BR_GO: f = 1'b1;
         default:        f = 1'b0;
     endcase
