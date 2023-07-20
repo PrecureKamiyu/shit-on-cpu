@@ -35,14 +35,15 @@ module myCPU (
     assign debug_wb_value     = (debug_wb_ena) ? wD : 32'b0;
 `endif
 
-// IROM part
-assign inst_addr = pc[15:2];
+    // IROM part
+    assign inst_addr = pc[15:2];
 
-// DRAM part here
-assign Bus_addr = alu_c;
-assign rd = Bus_rdata;
-assign Bus_wen = dram_we;
-assign Bus_wdata = rD2;
+    wire [31:0]         rd;
+    // DRAM part here
+    assign Bus_addr = alu_c;
+    assign rd = Bus_rdata;
+    assign Bus_wen = dram_we;
+    assign Bus_wdata = rD2;
 
 wire [31:0] npc_pc4;
 wire [31:0] npc;
