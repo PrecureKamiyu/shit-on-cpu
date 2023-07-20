@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 `include "defines.vh"
-module Controller
+module CONTROLLER
 #(
     localparam OP_R    = 7'b0110011,
     localparam OP_I    = 7'b0010011,

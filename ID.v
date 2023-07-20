@@ -8,7 +8,7 @@ module ID(
     input wire [31:0] din,
     input wire [31:0] npc_pc4,
     
-    // input wire [31:0] sext_ext,
+    // input
     input wire [31:0] dram_rdo,
     input wire [31:0] alu_c,
     
