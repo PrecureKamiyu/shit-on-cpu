@@ -16,13 +16,13 @@ module NPC (
     // npc
     always @(*) begin
         if (npc_op == `NPC_PC4) begin
-            npc <= pc + 32'd4;
+            npc = pc + 32'd4;
         end else if (npc_op == `NPC_ABSJMP) begin
-            npc <= pc + offset;
+            npc = pc + offset;
         end else if (npc_op == `NPC_JMP) begin
-            npc <= br ? pc + offset : pc + 32'd4;
+            npc = br ? pc + offset : pc + 32'd4;
         end else begin
-            // do nothing here
+            npc = pc + 32'd4;
         end
     end
 endmodule
