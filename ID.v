@@ -21,8 +21,8 @@ module ID(
     output wire [31:0] rD1,
     output wire [31:0] rD2,
     output wire [31:0] ext,
-    // for debug
-    output wire [31:0] rf_wD
+    // wD is only for debug
+    output reg [31:0] wD
     );
     
     
@@ -35,7 +35,6 @@ module ID(
     wire [31:0] sext_ext;
     assign sext_ext = ext;
 
-    reg [31:0] wD;
     always @(*) begin
         case (rf_wsel)
         `RF_WSEL_ALU: wD = alu_c;
@@ -45,9 +44,6 @@ module ID(
         default: wD = 0;
         endcase
     end
-
-    // only for debug
-    assign rf_wD = wD;
 
     RF ID_RF (
         .clk(clk),
