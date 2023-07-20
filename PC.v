@@ -9,10 +9,13 @@ module PC (
     
     always @(posedge clk or negedge rst) begin
         if (rst == 1) begin
-            curr_adr <= 32'b0;
-        end else begin
+        `ifdef RUN_TRACE
+            curr_adr <= -4;
+	`else
+            curr_adr <= 0;
+	`endif
+        end else
             curr_adr <= npc;
-        end
     end
 
     assign pc = curr_adr;
