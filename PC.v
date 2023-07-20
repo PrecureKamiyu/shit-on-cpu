@@ -10,7 +10,7 @@ module PC (
     always @(posedge clk or negedge rst) begin
         if (rst == 1) begin
         `ifdef RUN_TRACE
-            curr_adr <= -4;
+            curr_adr <= -8;
 	`else
             curr_adr <= 0;
 	`endif
