@@ -58,6 +58,7 @@ PC myPC (
 wire [31:0] rD1;
 wire [31:0] rD2;
 wire [31:0] sext_ext;
+wire [31:0] wD;
 
 ID myID (
   .din(inst),
@@ -69,7 +70,8 @@ ID myID (
   .sext_op(sext_op),
   .rD1(rD1),
   .rD2(rD2),
-  .ext(sext_ext)
+  .ext(sext_ext),
+  .rf_wD(wD)
 );
 
 wire [31:0] alu_c;
