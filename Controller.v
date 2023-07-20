@@ -38,7 +38,7 @@ module CONTROLLER
     // npc_op
     always @(*) begin
         case (opcode)
-            OP_R, OP_I, OP_LOAD, OP_LUI, OP_S: 
+            OP_R, OP_I, OP_LOAD, OP_LUI, OP_S:
                                 npc_op = `NPC_PC4;
             OP_JALR, OP_JAL:    npc_op = `NPC_ABSJMP;
             OP_B:               npc_op = `NPC_JMP;
@@ -148,9 +148,6 @@ module CONTROLLER
                 3'b101: br_op = `BR_GE;
                 default:br_op = `BR_NO;
             endcase
-        end
-        else if ((opcode == OP_JALR) || (opcode == OP_JAL)) begin
-             br_op = `BR_GO;
         end
         else br_op = `BR_NO;
     end
