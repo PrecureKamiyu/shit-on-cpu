@@ -43,7 +43,7 @@ NPC myNPC (
   .offset(sext_ext),
   .br(f),
   .npc_op(npc_op),
-  .npc_pc4(npc_pc4),
+  .pc4(npc_pc4),
   .npc(npc)
 );
 

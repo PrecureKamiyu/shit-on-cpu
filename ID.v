@@ -18,9 +18,11 @@ module ID(
     input wire [2:0] sext_op,
     
     // output part
-    output wire rD1,
-    output wire rD2,
-    output wire ext
+    output wire [31:0] rD1,
+    output wire [31:0] rD2,
+    output wire [31:0] ext,
+    // for debug
+    output wire [31:0] rf_wD
     );
     
     
@@ -44,8 +46,9 @@ module ID(
         endcase
     end
 
-    wire [31:0] rD1;
-    wire [31:0] rD2;
+    // only for debug
+    assign rf_wD = wD;
+
     RF ID_RF (
         .clk(clk),
         .rR1(din[19:15]),
