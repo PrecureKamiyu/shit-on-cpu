@@ -7,7 +7,6 @@ module IF(
     input wire [31:0] offset,
     input wire br,
     input wire [1:0] npc_op,
-    output wire [31:0] inst,
     output wire [31:0] pc4
     );
     
@@ -28,10 +27,5 @@ module IF(
         .rst(rst),
         .npc(npc),
         .pc(pc)
-    );
-    
-    IROM IF_IROM (
-        .a(pc[15:2]),
-        .spo(inst)
     );
 endmodule
