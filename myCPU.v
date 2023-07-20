@@ -72,9 +72,10 @@ wire [31:0] sext_ext;
 wire [31:0] wD;
 
 ID myID (
+  .clk(cpu_clk),
   .din(inst),
   .npc_pc4(npc_pc4),
-  .dram_rdo(Bus_rdata),
+  .dram_rdo(rd),
   .alu_c(alu_c),
   .rf_wsel(rf_wsel),
   .rf_we(rf_we),
