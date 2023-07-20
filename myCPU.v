@@ -107,7 +107,7 @@ wire [2:0] sext_op;
 
 wire [3:0] alu_op;
 wire b_sel;
-wire [1:0] br_op;
+wire [2:0] br_op;
 
 wire dram_we;
 
@@ -122,6 +122,5 @@ CONTROLLER myCON(
   .br_op(br_op),
   .dram_we(dram_we)
 );
-
 
 endmodule
