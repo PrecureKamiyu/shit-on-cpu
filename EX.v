@@ -35,11 +35,9 @@ module EX(
 
     wire [31:0] dif;
     assign dif = A - B;
-    reg         fake_f;
     branch EX_branch (
         .op(br_op),
         .C(dif),
-        .f(fake_f)
+        .f(f)
     );
-    assign f = 0;
 endmodule

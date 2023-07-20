@@ -18,7 +18,7 @@ module IF(
         .pc(pc),
         .offset(offset),
         .br(br),
-        .op(op),
+        .op(npc_op),
         .npc(npc),
         .pc4(pc4)
     );
