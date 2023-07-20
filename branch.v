@@ -4,7 +4,7 @@
 module branch(
     input wire [2:0] op,
     input wire [31:0] C,
-    output wire f
+    output reg f
 );
 
 always @(*) begin
