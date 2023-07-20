@@ -9,7 +9,6 @@ module myCPU (
     // Interface to IROM
     output wire [13:0]  inst_addr,
     input  wire [31:0]  inst,
-    
     // Interface to Bridge
     output wire [31:0]  Bus_addr,
     input  wire [31:0]  Bus_rdata,

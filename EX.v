@@ -33,7 +33,8 @@ module EX(
         .C(C)
     );
 
-    wire [31:0] dif = A - B;
+    wire [31:0] dif;
+    assign dif = A - B;
     branch EX_branch (
         .op(br_op),
         .C(dif),
