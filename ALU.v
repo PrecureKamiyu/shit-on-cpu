@@ -1,7 +1,7 @@
 `include "defines.vh"
 
 module ALU (
-    input wire [1:0] op,
+    input wire [3:0] op,
     input wire [31:0] A,
     input wire [31:0] B,
     output reg [31:0] C
