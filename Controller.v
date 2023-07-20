@@ -25,7 +25,7 @@ module CONTROLLER
     // EX ALU, branch
     output reg [3:0] alu_op,
     output reg b_sel,
-    output reg [1:0] br_op,
+    output reg [2:0] br_op,
     
     // dram
     output reg dram_we
@@ -137,7 +137,7 @@ module CONTROLLER
                 alu_op = `ALU_AND;
         endcase
     end
-    
+
     // additional br_op
     always @(*) begin
         if (opcode == OP_B) begin
@@ -146,9 +146,12 @@ module CONTROLLER
                 3'b001: br_op = `BR_NE;
                 3'b100: br_op = `BR_LT;
                 3'b101: br_op = `BR_GE;
-                default:br_op = `BR_EQ;
+                default:br_op = `BR_NO;
             endcase
-        end 
-        else br_op = `BR_EQ;
+        end
+        else if ((opcode == OP_JALR) || (opcode == OP_JAL)) begin
+             br_op = `BR_GO;
+        end
+        else br_op = `BR_NO;
     end
 endmodule

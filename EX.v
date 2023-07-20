@@ -5,8 +5,7 @@ module EX(
     // Controls
     input wire [3:0] alu_op,
     input wire b_sel,
-    input wire [1:0] br_op,
-    
+    input wire [2:0] br_op,
     // data
     input wire [31:0] A,
     input wire [31:0] sext_ext,
@@ -16,7 +15,7 @@ module EX(
     output wire [31:0] C,
     output wire f
     );
-    
+
     reg [31:0] B;
     // this one seems so unnecessary
     always @(*) begin
@@ -26,18 +25,18 @@ module EX(
         default:    B = 32'b0;
         endcase
     end
-    
+
     ALU EX_ALU (
         .op(alu_op),
         .A(A),
         .B(B),
         .C(C)
     );
-    
+
+    wire [31:0] dif = A - B;
     branch EX_branch (
         .op(br_op),
-        .C(C),
+        .C(dif),
         .f(f)
     );
-    
 endmodule

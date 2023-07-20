@@ -33,10 +33,12 @@
 `define B_SEL_RD2 'b0
 `define B_SEL_EXT 'b1
 
-`define BR_NE 'b00
-`define BR_EQ 'b01
-`define BR_GE 'b10
-`define BR_LT 'b11
+`define BR_NO 'b000
+`define BR_EQ 'b001
+`define BR_GE 'b010
+`define BR_LT 'b011
+`define BR_NE 'b100
+`define BR_GO 'b111
 // 外设I/O接口电路的端口地址
 `define PERI_ADDR_DIG   32'hFFFF_F000
 `define PERI_ADDR_LED   32'hFFFF_F060
