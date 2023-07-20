@@ -2,8 +2,9 @@
 `define RUN_TRACE
 
 `define NPC_PC4     'b00
-`define NPC_ABSJMP  'b01
-`define NPC_JMP     'b10
+`define NPC_JAL     'b01
+`define NPC_JALR    'b10
+`define NPC_JMP     'b11
 
 `define SEXT_R 'b000
 `define SEXT_I 'b001

@@ -37,13 +37,14 @@ module CONTROLLER
     
     // npc_op
     always @(*) begin
-        case (opcode)
-            OP_R, OP_I, OP_LOAD, OP_LUI, OP_S:
-                                npc_op = `NPC_PC4;
-            OP_JALR, OP_JAL:    npc_op = `NPC_ABSJMP;
-            OP_B:               npc_op = `NPC_JMP;
-            default:            npc_op = `NPC_PC4;
-        endcase
+      case (opcode)
+        OP_R, OP_I, OP_LOAD, OP_LUI, OP_S:
+                 npc_op = `NPC_PC4;
+        OP_JALR: npc_op = `NPC_JALR;
+        OP_JAL:  npc_op = `NPC_JAL;
+        OP_B:    npc_op = `NPC_JMP;
+        default: npc_op = `NPC_PC4;
+      endcase
     end
     
     // rf_wsel

@@ -51,6 +51,7 @@ wire [31:0] npc;
 NPC myNPC (
   .pc(pc),
   .offset(sext_ext),
+  .imm(alu_c),
   .br(f),
   .npc_op(npc_op),
   .pc4(npc_pc4),
