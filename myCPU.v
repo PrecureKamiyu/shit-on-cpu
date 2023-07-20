@@ -81,7 +81,7 @@ EX myEX (
   .br_op(br_op),
   .A(rD1),
   .sext_ext(sext_ext),
-  .rf_rD2(rD2)
+  .rf_rD2(rD2),
   .C(alu_c),
   .f(f)
 );
