@@ -47,6 +47,7 @@ NPC myNPC (
   .npc(npc)
 );
 
+wire [31:0] pc;
 PC myPC (
   .npc(npc),
   .pc(pc),
